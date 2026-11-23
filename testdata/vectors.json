@@ -1,0 +1,18 @@
+[
+  {
+    "description": "Inhaltsschlüssel für einen Empfänger, Kontext = Eintrags-ID",
+    "privateKey": "BwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwc",
+    "publicKey": "E75P6uryBMf9M1j8nAByGIHRdCeBKCJ-xnTzf3_pe20",
+    "kid": "l_jrHIWxAD4WTzNZp34IxdWLIGPjrESYyzUJtgEMeH0",
+    "purpose": "opencore/keystore/v1/cek",
+    "context": "mail:konto-1",
+    "infoHex": "000000186f70656e636f72652f6b657973746f72652f76312f63656b0000002b6c5f6a724849577841443457547a4e5a703334497864574c4947506a72455359797a554a7467454d6548300000000c6d61696c3a6b6f6e746f2d31",
+    "envelope": {
+      "v": 1,
+      "suite": "HPKE-X25519-SHA256-A256GCM",
+      "kid": "l_jrHIWxAD4WTzNZp34IxdWLIGPjrESYyzUJtgEMeH0",
+      "sealed": "42Lp/TieAgToEfeBrVZb+gJxhSb7Mmdw0l01K3QOeVZWrm0/HJHc8E2ayOFrmEKUjZoEGmj6tsPDWASNEpnDJRxmU8cTdGBpvRp5l/KI2e4="
+    },
+    "plaintext": "q6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6s"
+  }
+]
