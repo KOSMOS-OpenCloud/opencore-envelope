@@ -61,6 +61,14 @@ func TestContentKeyRoundTripAndBinding(t *testing.T) {
 	}
 }
 
+// RFC 8037 A.3: Thumbprint des Ed25519-Beispielschlüssels (bisher in opencloud pkg/keystore geprüft).
+func TestJWKThumbprintRFC8037(t *testing.T) {
+	publicKey, _ := base64.RawURLEncoding.DecodeString("11qYAYKxCrfVS_7TyWQHOg7hcvPapiMlrwIaaPcHURo")
+	if thumbprint := JWKThumbprint("Ed25519", publicKey); thumbprint != "kPrK_qmxVWaYVA9wwBF6Iuo3vVzz7TxHCTwXBygrS4k" {
+		t.Fatalf("thumbprint %s", thumbprint)
+	}
+}
+
 func TestEntryRoundTripAndBinding(t *testing.T) {
 	contentKey, _ := NewContentKey()
 	nonce, ciphertext, err := EncryptEntry(contentKey, "entry-1", []byte("geheim"))

@@ -84,6 +84,12 @@ func RecipientFor(publicKey []byte) (Recipient, error) {
 	return Recipient{KeyID: keyID, PublicKey: publicKey}, nil
 }
 
+// JWKThumbprint returns the RFC 7638 thumbprint (SHA-256, base64url) of an OKP public key on the named curve
+// (X25519, Ed25519).
+func JWKThumbprint(curve string, publicKey []byte) string {
+	return jwkThumbprint(curve, publicKey)
+}
+
 func jwkThumbprint(curve string, publicKey []byte) string {
 	// RFC 7638: required members in lexicographic order, no whitespace.
 	canonicalJWK := fmt.Sprintf(`{"crv":"%s","kty":"OKP","x":"%s"}`, curve, base64.RawURLEncoding.EncodeToString(publicKey))
